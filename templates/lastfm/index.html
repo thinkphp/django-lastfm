@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <title>Listening Journal — Last.fm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'lastfm/css/app.css' %}">
+  <script src="{% static 'lastfm/js/app.js' %}" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Last.fm home"><span class="brand-mark">♫</span><span>last<span class="brand-dot">.</span>fm</span></a>
+      <div class="topbar-note"><span class="live-dot"></span> YOUR MUSIC, IN REAL TIME</div>
+      <span class="topbar-label">LISTENING JOURNAL</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>01</span> &nbsp; THE SOUNDTRACK OF YOU</p>
+          <h1>Every listen<br>leaves a <span>trace.</span></h1>
+          <p class="hero-description">A little window into what’s been on repeat.<br class="desktop-break"> Find a listener and explore their recent history.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-glow"></div><div class="vinyl"><div class="vinyl-label">last<br>fm</div></div>
+          <div class="art-caption">SOUND<br>IN MOTION <span>✳</span></div>
+        </div>
+      </section>
+
+      <section class="search-section" aria-label="Search a Last.fm listener">
+        <div class="section-heading"><span class="section-number">01 /</span><span>FIND A LISTENER</span></div>
+        <form id="search-form" class="search-form">
+          <label class="input-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="username" name="username" type="text" placeholder="Enter a Last.fm username" autocomplete="off" required></label>
+          <button class="search-button" type="submit"><span>Explore listening</span><span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+
+      <section id="results" class="results-section" aria-live="polite" hidden>
+        <div id="status" class="state-card" hidden></div>
+        <div id="track-content" hidden>
+          <div class="results-heading"><div><p class="eyebrow">NOW PLAYING THROUGH</p><h2 id="results-user"></h2></div><div class="track-count"><span id="track-count">00</span> RECENT PLAYS</div></div>
+          <div id="track-list" class="track-list"></div>
+          <div id="load-more-area" class="load-more-area" hidden>
+            <p id="load-more-error" class="load-more-error" hidden></p>
+            <button id="load-more" class="load-more-button" type="button"><span class="button-label">Load more</span><span class="button-arrow" aria-hidden="true">↓</span></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>MADE FOR THE MUSIC-OBSESSED</span><span>LAST.FM LISTENING JOURNAL <b>✳</b></span></footer>
+  </div>
+</body>
+</html>
