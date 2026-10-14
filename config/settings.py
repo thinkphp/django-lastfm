@@ -122,6 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "/static/"
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
@@ -129,4 +132,5 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", "2993c6e15c91a2890c2f11fa95673067")
+
+_API_KEY = os.environ.get("LASTFM_API_KEY", "2993c6e15c91a2890c2f11fa95673067")
