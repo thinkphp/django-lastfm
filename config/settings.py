@@ -133,4 +133,4 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-_API_KEY = os.environ.get("LASTFM_API_KEY", "2993c6e15c91a2890c2f11fa95673067")
+LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", "")
